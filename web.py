@@ -45,7 +45,7 @@ class MainWindow(QMainWindow):
         reload_btn.triggered.connect(self.browser.reload)
         navbar.addAction(reload_btn)
 
-        home_btn = QAction('Home', self)
+        home_btn = QAction(' de Home', self)
         
         home_btn.triggered.connect(self.navigate_home)
         navbar.addAction(home_btn)
@@ -57,7 +57,7 @@ class MainWindow(QMainWindow):
         self.browser.urlChanged.connect(self.update_url)
 
     def navigate_home(self):
-        self.browser.setUrl(QUrl('https://instagram.com/am_ayussh'))
+        self.browser.setUrl(QUrl('https://www.youtube.com/watch?v=dQw4w9WgXcQ'))
 
     def navigate_to_url(self):
         url = self.url_bar.text()
@@ -68,6 +68,6 @@ class MainWindow(QMainWindow):
 
 
 app = QApplication(sys.argv)
-QApplication.setApplicationName('Ayush Suresh Browser')
+QApplication.setApplicationName('deepfriedfish Browser')
 window = MainWindow()
 app.exec_()
